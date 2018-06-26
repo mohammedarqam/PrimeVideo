@@ -4,6 +4,11 @@
 // Font path is used to include ionicons,
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
+$text-input-md-highlight-color-invalid: transparent;
+$text-input-md-highlight-color-valid: transparent;
+$text-input-md-show-invalid-highlight: transparent;
+$text-input-md-highlight-color: transparent;
+$text-input-md-show-valid-highlight: transparent;
 
 
 // The app direction is used to include
@@ -34,11 +39,12 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    #209E91,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  whiter:     #ffffff,
+  dark:       #1C2B36
 );
 
 
@@ -60,6 +66,7 @@ $colors: (
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
+$split-pane-side-max-width : 300px;
 
 
 

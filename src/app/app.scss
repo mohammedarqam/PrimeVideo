@@ -1,16 +1,49 @@
-// http://ionicframework.com/docs/theming/
-
-
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+ion-menu ::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  ion-menu .t {
+    background-color: #1C2B36;
+    margin: 0;
+    padding: 0 !important;
+    font-size: 2.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  
+  ion-menu .b {
+    color: #209E91;
+  }
+  
+  ion-menu .bg-semidark {
+    background-color: #1C2B36;
+  }
+  
+  ion-menu .no-scroll .scroll-content {
+    overflow: hidden;
+  }
+  
+  ion-menu .activeHighlight {
+    background-color: #209E91;
+    color: white !important;
+  }
+  .content {
+    background-color: #F0F3F4;
+  }
+  
+  .title {
+    font-weight: 700;
+    color: #666;
+    float: left;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    opacity: .9;
+    font-family: Roboto,sans-serif;
+  }
+  
