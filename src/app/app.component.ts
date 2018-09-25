@@ -14,6 +14,7 @@ export class MyApp {
   rootPage: any = LoginPage;
   activePage: any;
 
+  full : boolean = true;
 
   pages: Array<{ title: string, component: any, icon: any, color : string }>;
 
@@ -84,6 +85,12 @@ presentToast(msg) {
     showCloseButton: false,
   });
   toast.present();
+}
+collapse(){
+  this.full = false;
+}
+expand(){
+  this.full = true;
 }
 
 }

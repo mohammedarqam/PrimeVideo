@@ -46,4 +46,11 @@ ion-menu ::-webkit-scrollbar {
     opacity: .9;
     font-family: Roboto,sans-serif;
   }
-  
+  .fullPain{
+    min-width: 5% !important;
+    max-width: 5% !important ;
+  }
+  .halfPain{
+    min-width: 20% !important;
+    max-width: 20% !important ;
+  }

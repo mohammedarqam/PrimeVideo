@@ -1,24 +1,47 @@
-<ion-split-pane>
-  <ion-menu [content]="content">
+<ion-split-pane  >
+  <ion-menu [content]="content" [class.fullPain]="!full" [class.halfPain]="full" >
     <ion-header>
       <ion-toolbar color="dark">
-        <h1 class="t">App Name Admin</h1>
+        <h1 *ngIf="full" class="t">Arqam.Tech</h1>
       </ion-toolbar>
     </ion-header>
 
     <ion-content class="no-scroll bg-semidark">
-      <ion-list no-lines>
+
+      <ion-list no-lines *ngIf="full" >
         <button menuClose color="dark" [class.activeHighlight]="checkActive(p)" 
         ion-item *ngFor="let p of pages" (click)="openPage(p)">
           <ion-icon class="menu-icon" item-left [name]="p.icon" [color]="p.color" ></ion-icon>
-
           {{p.title}}
         </button>
       </ion-list>
-    </ion-content>
 
+      <ion-list no-lines *ngIf="!full" >
+        <button menuClose color="dark" [class.activeHighlight]="checkActive(p)" 
+        ion-item *ngFor="let p of pages" (click)="openPage(p)" icon-only >
+          <ion-icon class="menu-icon" item-left [name]="p.icon" [color]="p.color" ></ion-icon>
+        </button>
+      </ion-list>
+
+    </ion-content>
     <ion-footer class="menu-footer">
-      <button ion-button block (click)="signOut()" color="danger">Sign Out</button>
+      <ion-list no-lines>
+      <button ion-button block *ngIf="full"  (click)="signOut()" color="danger">
+        Sign Out
+      </button>
+      <button ion-item block icon-only *ngIf="!full" (click)="signOut()" color="danger">
+        <ion-icon name="md-power" item-left ></ion-icon>
+      </button>
+
+
+      <button menuClose color="dark" *ngIf="full" ion-item (click)="collapse()">
+        <ion-icon class="menu-icon" item-end name="md-arrow-dropleft" color="whiter" ></ion-icon>
+      </button>
+
+      <button menuClose color="dark" *ngIf="!full" ion-item (click)="expand()">
+        <ion-icon class="menu-icon" item-end name="md-arrow-dropright" color="whiter" ></ion-icon>
+      </button>
+      </ion-list>
     </ion-footer>
   </ion-menu>
 
