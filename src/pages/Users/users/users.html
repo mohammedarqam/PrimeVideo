@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 >
+  <ion-item no-lines class="content">
+  <h1 class="title" item-start>Users</h1>
+  </ion-item>
+  </ion-col>
+  <ion-col col-6 push-2 >
+  <ion-searchbar item-end animated="true" placeholder="Search by email, phone or name" 
+  [(ngModel)]="searchBar" (ionInput)="getItems(searchBar)"></ion-searchbar>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+  
+  <ion-grid>
+      <ion-row>
+        <ion-col col-3 *ngFor="let u of users" >
+          <ion-card>
+  
+            <ion-navbar class="titel" color="primary" >
+              <ion-title  >{{u.Name}}</ion-title>
+              <ion-buttons end>
+                <button ion-button clear (click)="viewOptions($event,u)" icon-only >
+                  <ion-icon name="md-more"></ion-icon>
+                </button>
+              </ion-buttons>
+            </ion-navbar>
+          <ion-card-content>
+            <ion-item>
+              <ion-icon name="md-mail" item-start color="primary"></ion-icon>
+              <p item-end > {{u.Email}} </p>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="md-call" item-start color="primary"></ion-icon>
+              <p item-end > {{u.Phone}} </p>
+            </ion-item>
+          </ion-card-content>
+
+
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>

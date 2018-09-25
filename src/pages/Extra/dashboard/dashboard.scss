@@ -1,0 +1,14 @@
+page-dashboard {
+    .mNum{
+        text-align: center;
+        color: map-get($colors,primary);
+        font-size: 36px;
+        font-weight: bolder;
+    }
+    .mText{
+        text-align: center;
+        color: map-get($colors,priamry);
+    
+    }
+    
+}

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title> User Details </ion-title>
+    <ion-buttons end>
+      <button ion-button clear (click)="close()">Done</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card >
+    <ion-card-content>
+      
+      <ion-item >
+        <p ion-text item-start color="primary">Name</p>
+        <p item-end > {{user.Name}} </p>
+      </ion-item>
+  
+      <ion-item >
+        <p ion-text item-start color="primary">Email</p>
+        <p item-end > {{user.Email}} </p>
+      </ion-item>
+
+      <ion-item >
+        <p ion-text item-start color="primary">Phone</p>
+        <p item-end > {{user.Phone}} </p>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
