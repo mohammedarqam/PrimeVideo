@@ -1,9 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, ToastController } from 'ionic-angular';
-import { HomePage } from '../pages/home/home';
-import { MoviesPage } from '../pages/movies/movies';
-import { TvShowsPage } from '../pages/tv-shows/tv-shows';
-import { KidsPage } from '../pages/kids/kids';
+import { Nav, Platform, ToastController, PopoverController } from 'ionic-angular';
+import { HomePage } from '../pages/Main Pages/home/home';
+import { MoviesPage } from '../pages/Main Pages/movies/movies';
+import { TvShowsPage } from '../pages/Main Pages/tv-shows/tv-shows';
+import { KidsPage } from '../pages/Main Pages/kids/kids';
+import { ViewOptionsPage } from '../pages/Extra/view-options/view-options';
 @Component({
   templateUrl: 'app.html'
 })
@@ -14,7 +15,7 @@ export class MyApp {
 
   constructor(
     public platform: Platform,    
-    public toastCtrl: ToastController,
+    public popoverCtrl: PopoverController,
     ) {
       this.initializeApp();
   }
@@ -28,7 +29,13 @@ export class MyApp {
 
 
 
-
+  viewOptions(myEvent) {
+    let popover = this.popoverCtrl.create(ViewOptionsPage,{},{cssClass: 'backdropOpacityPopover'});
+    popover.present({
+      ev: myEvent
+    });
+    
+  }
 
   gtHome(){
     this.nav.setRoot(HomePage);

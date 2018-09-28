@@ -6,10 +6,13 @@ import * as firebase from 'firebase';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import {AngularFireAuthModule} from 'angularfire2/auth';
-import { HomePage } from '../pages/home/home';
-import { KidsPage } from '../pages/kids/kids';
-import { MoviesPage } from '../pages/movies/movies';
-import { TvShowsPage } from '../pages/tv-shows/tv-shows';
+import { HomePage } from '../pages/Main Pages/home/home';
+import { KidsPage } from '../pages/Main Pages/kids/kids';
+import { MoviesPage } from '../pages/Main Pages/movies/movies';
+import { TvShowsPage } from '../pages/Main Pages/tv-shows/tv-shows';
+import { DetailPopPage } from '../pages/Extra/detail-pop/detail-pop';
+import { ViewOptionsPage } from '../pages/Extra/view-options/view-options';
+import { WatchlistPage } from '../pages/Extra/watchlist/watchlist';
 
 
 
@@ -33,6 +36,9 @@ firebase.initializeApp(firebaseCred);
     KidsPage,
     MoviesPage,
     TvShowsPage,
+    DetailPopPage,
+    ViewOptionsPage,
+    WatchlistPage,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +54,9 @@ firebase.initializeApp(firebaseCred);
     KidsPage,
     MoviesPage,
     TvShowsPage,
+    DetailPopPage,
+    ViewOptionsPage,
+    WatchlistPage,
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

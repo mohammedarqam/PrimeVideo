@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="headi">
+  <ion-navbar color="headi" padding-top padding-bottom sticky   >
     <ion-title >
       <button ion-button clear (click)="gtHome()" class="mainBar" >
         Prime Video
@@ -17,6 +17,12 @@
         Kids
       </button>
     </ion-title>
+    <ion-buttons end>
+        <!-- <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar> -->
+        <button ion-button icon-only clear (click)="viewOptions($event)" padding-right >
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 

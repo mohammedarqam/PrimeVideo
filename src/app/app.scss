@@ -6,3 +6,12 @@
   background : map-get($colors,headi);
   color: #ffffff;
 }
+.searchbar-md{
+  background-color: #111111 !important ;
+}
+.backdropOpacityPopover {
+  ion-backdrop {
+      opacity: 0.6;
+      height: 90% !important ;
+  }
+}
