@@ -1,56 +1,8 @@
-ion-menu ::-webkit-scrollbar {
-    width: 1px;
-  }
-  
-  ion-menu .t {
-    background-color: #1C2B36;
-    margin: 0;
-    padding: 0 !important;
-    font-size: 2.5em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-  }
-  
-  ion-menu .b {
-    color: #209E91;
-  }
-  
-  ion-menu .bg-semidark {
-    background-color: #1C2B36;
-  }
-  
-  ion-menu .no-scroll .scroll-content {
-    overflow: hidden;
-  }
-  
-  ion-menu .activeHighlight {
-    background-color: #209E91;
-    color: white !important;
-  }
-  .content {
-    background-color: #F0F3F4;
-  }
-  
-  .title {
-    font-weight: 700;
-    color: #666;
-    float: left;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
-    opacity: .9;
-    font-family: Roboto,sans-serif;
-  }
-  .fullPain{
-    min-width: 5% !important;
-    max-width: 5% !important ;
-  }
-  .halfPain{
-    min-width: 20% !important;
-    max-width: 20% !important ;
-  }
+.content {
+  background-color: #111111;
+}
+.mainBar{
+  display: inline-block !important ;
+  background : map-get($colors,headi);
+  color: #ffffff;
+}
